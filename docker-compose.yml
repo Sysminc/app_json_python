@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  web_app_py:
+    image: app_py:v0.1
+    ports:
+      - "5000:5000"
+    volumes:
+      - ".:/usr/src/app"
+      - "/var/run/docker.sock:/var/run/docker.sock"  # Mount Docker socket
